@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "110381353982",
+    "firebase_url": "https://halanx-d8249.firebaseio.com",
+    "project_id": "halanx-d8249",
+    "storage_bucket": "halanx-d8249.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110381353982:android:7e523cbce003596e",
+        "android_client_info": {
+          "package_name": "com.halanx.tript.userapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "110381353982-chqvge0de3r5gsndmnbhkqkot6iti6pm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.halanx.tript.userapp",
+            "certificate_hash": "8EC4A62531D5F7531E6B262D9CEC042F6085B996"
+          }
+        },
+        {
+          "client_id": "110381353982-pfad875cdqv6kdrmophq4j2u7hd7rj7c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu_phLn6_e3EnVEZo_jKoeFGp2YDSwsOs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "110381353982-pfad875cdqv6kdrmophq4j2u7hd7rj7c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
