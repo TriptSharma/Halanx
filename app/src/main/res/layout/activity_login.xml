@@ -28,6 +28,7 @@
             android:layout_height="50dp"
             android:hint="@string/email_id"
             android:textColorHint="#fff"
+            android:inputType="text"
             android:layout_gravity="center_horizontal"/>
 
         <EditText
@@ -40,6 +41,7 @@
             android:layout_height="50dp"
             android:hint="@string/password"
             android:textColorHint="#fff"
+            android:inputType="textPassword"
             android:layout_gravity="center_horizontal"/>
 
         <Button
@@ -53,6 +55,17 @@
             android:textColor="#fff"
             android:textSize="20dp"
             android:id="@+id/button"/>
+
+        <com.google.android.gms.common.SignInButton
+
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/sign_in"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:id="@+id/GoogleButton"/>
 
         <Button
             android:layout_gravity="center_horizontal"
