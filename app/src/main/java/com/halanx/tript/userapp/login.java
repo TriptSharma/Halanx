@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -16,13 +17,14 @@ public class login extends AppCompatActivity {
     Button login, signup;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
+    public static final int RC_SIGN_IN=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        mAuth= FirebaseAuth.getInstance();
+        /*mAuth= FirebaseAuth.getInstance();
         mAuthListener = new FirebaseAuth.AuthStateListener(){
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth){
@@ -30,9 +32,15 @@ public class login extends AppCompatActivity {
                 if(user != null){
                     Log.d("SIGNIN_ACT", "onAuthStateChanged:signed_in:"+user.getUid()); //user signed in
                 }
-                else Log.d("SIGNIN_ACT", "onAuthStatteChanged:signed_out");
+                else {
+                    Log.d("SIGNIN_ACT", "onAuthStatteChanged:signed_out");
+                    startActivityForResult(
+                            // Get an instance of AuthUI based on the default app
+                            AuthUI.getInstance().createSignInIntentBuilder().setIsSmartLockEnabled(false).build(),
+                            RC_SIGN_IN);
+                }
             }
-        };
+        };*/
         login = (Button) findViewById(R.id.button);
         signup= (Button) findViewById(R.id.sign_up);
 
@@ -70,13 +78,13 @@ public class login extends AppCompatActivity {
             }
         });
     }
-    public void onStart(){
-        super.onStart();
-        mAuth.addAuthStateListener(mAuthListener);
+    public void onResume(){
+        super.onResume();
+       // mAuth.addAuthStateListener(mAuthListener);
     }
-    public void onStop(){
-        super.onStop();
-        if(mAuthListener != null)
-        mAuth.removeAuthStateListener(mAuthListener);
+    public void onPause(){
+        super.onPause();
+       // if(mAuthListener != null)
+       // mAuth.removeAuthStateListener(mAuthListener);
     }
 }

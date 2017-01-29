@@ -4,20 +4,20 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_account"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/user"
             android:title="Account" />
         <item
             android:id="@+id/nav_order"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/purchase_order_filled_501"
             android:title="Orders" />
         <item
             android:id="@+id/nav_payment"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/bank_card_backside_50"
             android:title="Payment"
         />
         <item
             android:id="@+id/nav_favourites"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/fav_48"
             android:title="Favourites" />
         <item
             android:id="@+id/nav_list"
@@ -25,15 +25,15 @@
             android:title="Lists N Recipes" />
         <item
             android:id="@+id/nav_pts"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/coins_filled_50"
             android:title="Points" />
         <item
             android:id="@+id/nav_ref"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_menu_share"
             android:title="Refer and Earn" />
         <item
             android:id="@+id/nav_shopper"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/delivery_filled_50"
             android:title="BecomeSHOPPER" />
         <item
             android:id="@+id/nav_help"

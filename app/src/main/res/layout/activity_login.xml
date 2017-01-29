@@ -13,9 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
         android:id="@+id/ll1">
 
         <EditText
@@ -28,8 +27,11 @@
             android:layout_height="50dp"
             android:hint="@string/email_id"
             android:textColorHint="#fff"
+            android:textColor="#fff"
             android:inputType="text"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="10sp"
+            android:paddingRight="10sp"/>
 
         <EditText
             android:layout_marginTop="10dp"
@@ -41,8 +43,11 @@
             android:layout_height="50dp"
             android:hint="@string/password"
             android:textColorHint="#fff"
+            android:textColor="#fff"
             android:inputType="textPassword"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="10sp"
+            android:paddingRight="10sp"/>
 
         <Button
 
@@ -57,7 +62,6 @@
             android:id="@+id/button"/>
 
         <com.google.android.gms.common.SignInButton
-
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"

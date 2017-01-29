@@ -15,6 +15,7 @@
     <string name="caption">Rs X more for FREE DELIVERY</string>
     <string name="payment">Add to CART</string>
     <string name="action">Tap the Circle to Accept</string>
+    <string name="sign_out">Sign Out</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

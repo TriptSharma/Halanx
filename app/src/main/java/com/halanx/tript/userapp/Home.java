@@ -13,6 +13,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import com.firebase.ui.auth.AuthUI;
+
 public class Home extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -70,9 +72,11 @@ public class Home extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            return true;}
+        else if (id == R.id.action_sign_out)     {
+                AuthUI.getInstance().signOut(this);
             return true;
-        }
-
+            }
         return super.onOptionsItemSelected(item);
     }
 
