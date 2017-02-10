@@ -1,5 +1,7 @@
 package com.halanx.tript.userapp;
 
+import android.content.Intent;
+
 /**
  * Created by Tript on 28-12-2016.
  */

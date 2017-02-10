@@ -2,29 +2,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.halanx.tript.userapp.MainFragment">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/item_name"
-        android:id="@+id/item_container"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="jump.home.class"/>
-    <SearchView
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="110dp"
         android:hint="Search Here"
         android:id="@+id/search">
 
-    </SearchView>
+    </TextView>
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/search"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+    <TextView
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/shopping_in"
+        android:text="Shopping In :"
+        android:textSize="20dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_marginLeft="10sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|"
+        android:textSize="20dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_alignEnd="@+id/shopping_in"
+        android:id="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="For :"
+        android:textSize="20dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/textView3"
+        android:layout_above="@+id/recycler"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:paddingLeft="10sp"
+        android:layout_toEndOf="@+id/shopping_in"
+        android:layout_marginRight="10sp"/>
+
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/search"
-        android:id="@+id/recycler">
-
+        android:layout_below="@+id/shopping_in"
+        android:id="@+id/recycler"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="#D0C9C9"
+        >
     </android.support.v7.widget.RecyclerView>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recycler"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="#D0C9C9"
+        android:id="@+id/recycler2">
+    </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>

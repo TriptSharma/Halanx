@@ -1,7 +1,5 @@
 package com.halanx.tript.userapp;
 
-
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -19,10 +17,11 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MainFragment extends Fragment {
+public class MainFragment extends Fragment implements Adapter.ClickListener {
     Button but1;
-    private RecyclerView recyclerView;
-    private Adapter adapter;
+    private RecyclerView recyclerView, recyclerView2;
+    private Adapter adapter,adapter2;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,29 +30,34 @@ public class MainFragment extends Fragment {
 
         //using the button in frag
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-        but1 = (Button) rootView.findViewById(R.id.item_container);
-        but1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity() , Item.class);
-                startActivity(intent);
-            }
-        });
+
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler);
         adapter=new Adapter(getActivity(),getData());
+        adapter.setClickListener(this);
+
+
         recyclerView.setAdapter(adapter);
         LinearLayoutManager myLinearLayout = new LinearLayoutManager(getActivity());
         myLinearLayout.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerView.setLayoutManager(myLinearLayout);
+
+        recyclerView2 = (RecyclerView) rootView.findViewById(R.id.recycler2);
+        adapter2=new Adapter(getActivity(),getData());
+        recyclerView2.setAdapter(adapter2);
+        LinearLayoutManager myLinearLayout2 = new LinearLayoutManager(getActivity());
+        myLinearLayout2.setOrientation(LinearLayoutManager.HORIZONTAL);
+        recyclerView2.setLayoutManager(myLinearLayout2);
+
+
         return rootView;
     }
 
     public static List<Info> getData(){
         List<Info> data = new ArrayList<>();
-        int icon_id[] = {R.drawable.ic_menu_camera,
-                R.drawable.ic_menu_gallery ,
-                R.drawable.ic_menu_send,
-                R.drawable.ic_menu_share };
+        int icon_id[] = {R.drawable.a,
+                R.drawable.b ,
+                R.drawable.c,
+                R.drawable.d };
         String text[] = {"item1" , "item2", "item3", "item4"};
         for (int i=0; i<icon_id.length && i<text.length;i++){
             Info current = new Info();
@@ -62,5 +66,10 @@ public class MainFragment extends Fragment {
             data.add(current);
         }
         return data;
+    }
+
+    @Override
+    public void itemClicked(View view, int position){
+        startActivity(new Intent(getActivity(),Item.class));
     }
 }

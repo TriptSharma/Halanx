@@ -22,7 +22,7 @@
         <item
             android:id="@+id/nav_list"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Lists N Recipes" />
+            android:title="List and Recipes" />
         <item
             android:id="@+id/nav_pts"
             android:icon="@drawable/coins_filled_50"
@@ -34,10 +34,14 @@
         <item
             android:id="@+id/nav_shopper"
             android:icon="@drawable/delivery_filled_50"
-            android:title="BecomeSHOPPER" />
+            android:title="Become a Shopper" />
         <item
             android:id="@+id/nav_help"
             android:icon="@drawable/ic_menu_manage"
             android:title="Help" />
+        <item
+            android:id="@+id/nav_sign_out"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Sign Out" />
     </group>
 </menu>

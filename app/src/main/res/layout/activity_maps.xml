@@ -2,6 +2,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/p1"
+        android:layout_centerVertical="true"/>
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -17,6 +23,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@+id/map"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:id="@+id/lay1">
     <ImageView
         android:layout_width="200dp"
@@ -34,16 +42,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:layout_below="@+id/lay1"
         android:id="@+id/lay2">
-    <Button
-        android:layout_width="192dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/call"
-        android:text="Call" />
 
-    <Button
-        android:layout_width="192dp"
+        <Button
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/call"
+            android:text="Call" />
+
+        <Button
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:id="@+id/text"
         android:text="Text" />

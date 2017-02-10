@@ -17,17 +17,42 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:src="@drawable/shopping_cart"
+                    android:background="@color/colorPrimary"
+                    android:id="@+id/imageButton"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="10dp"
+                    />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+        <com.arlib.floatingsearchview.FloatingSearchView
+            android:id="@+id/floating_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            app:floatingSearch_searchHint="Search for Products"
+            app:floatingSearch_suggestionsListAnimDuration="250"
+            app:floatingSearch_showSearchKey="false"
+            app:floatingSearch_leftActionMode="showSearch"
+            app:floatingSearch_close_search_on_keyboard_dismiss="true"/>
 
     </android.support.design.widget.AppBarLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/frag_container">
+        android:id="@+id/frag_container"
+        >
 
     </FrameLayout>
 
 
 </android.support.design.widget.CoordinatorLayout>
-

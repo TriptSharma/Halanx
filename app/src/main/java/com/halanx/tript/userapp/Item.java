@@ -12,6 +12,7 @@ public class Item extends AppCompatActivity {
     Button plus, minus,cart;  int i; String val;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item);
 
@@ -35,6 +36,7 @@ public class Item extends AppCompatActivity {
         minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(i == 0){ }
                 i--;
                 val = Integer.toString(i);
                 ed1.setText(val);

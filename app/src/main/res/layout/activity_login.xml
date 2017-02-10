@@ -6,16 +6,22 @@
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#000"
     tools:context="com.halanx.tript.userapp.login">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:id="@+id/ll1">
+        android:id="@+id/ll1"
+        android:weightSum="1">
 
         <EditText
             android:layout_marginTop="100dp"
@@ -26,8 +32,6 @@
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:hint="@string/email_id"
-            android:textColorHint="#fff"
-            android:textColor="#fff"
             android:inputType="text"
             android:layout_gravity="center_horizontal"
             android:paddingLeft="10sp"
@@ -42,8 +46,6 @@
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:hint="@string/password"
-            android:textColorHint="#fff"
-            android:textColor="#fff"
             android:inputType="textPassword"
             android:layout_gravity="center_horizontal"
             android:paddingLeft="10sp"
@@ -59,24 +61,25 @@
             android:text="@string/sign_in"
             android:textColor="#fff"
             android:textSize="20dp"
+            android:foregroundGravity="center"
             android:id="@+id/button"/>
 
         <com.google.android.gms.common.SignInButton
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_width="357dp"
+            android:layout_height="wrap_content"
             android:text="@string/sign_in"
             android:textColor="#fff"
             android:textSize="20dp"
-            android:id="@+id/GoogleButton"/>
+            android:foregroundGravity="center"
+            android:id="@+id/GoogleButton" />
 
         <Button
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/forgot"
-            android:textColor="#fff"
             android:id="@+id/button2"/>
     </LinearLayout>
 
@@ -103,5 +106,6 @@
         android:id="@+id/PopUp"
         android:text="CallPopUP"
         android:layout_below="@+id/vibrate"/>
-
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
